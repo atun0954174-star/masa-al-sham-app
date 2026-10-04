@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="ماسة الشام للحوالات المالية - بغداد، العراق">
+<meta name="theme-color" content="#071a33">
+<title>ماسة الشام للحوالات المالية</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+  <a href="#home" class="brand"><span class="logo">◇</span><span><b>ماسة الشام</b><small>للحوالات المالية</small></span></a>
+  <button class="menu" id="menu">☰</button>
+  <nav id="nav">
+    <a href="#home">الرئيسية</a><a href="#countries">الدول</a><a href="#calculator">حاسبة الحوالات</a>
+    <a href="#send">إرسال حوالة</a><a href="#track">تتبع حوالتي</a><a href="#about">من نحن</a><a href="#contact">تواصل معنا</a>
+  </nav>
+  <div class="header-actions"><button id="lang">English</button><a class="wa" target="_blank" rel="noopener" href="https://wa.me/9647772073950">WhatsApp</a></div>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div>
+    <span class="eyebrow">MASA AL-SHAM FINANCIAL TRANSFERS</span>
+    <h1>حوالاتك المالية… <em>بثقة وأمان</em></h1>
+    <p>نوصّل أموالك من بغداد إلى سوريا ومصر ولبنان وتركيا، بخيارات استلام متعددة وخدمة موثوقة.</p>
+    <div class="actions"><a class="btn primary" href="#send">إرسال حوالة</a><a class="btn secondary" href="#track">تتبع حوالتي</a></div>
+    <div class="trust"><span>✓ شركة مرخصة</span><span>✓ منذ 2020</span><span>✓ بغداد، العراق</span></div>
+  </div>
+  <div class="hero-art"><div class="hub">بغداد<br><small>IRAQ</small></div>
+    <div class="country c1">🇸🇾<b>سوريا</b></div><div class="country c2">🇪🇬<b>مصر</b></div>
+    <div class="country c3">🇱🇧<b>لبنان</b></div><div class="country c4">🇹🇷<b>تركيا</b></div>
+  </div>
+</section>
+
+<section id="countries" class="section">
+  <div class="head"><span class="eyebrow">COUNTRIES</span><h2>الدول التي نخدمها</h2><p>الحوالات متاحة إلى أربع دول فقط.</p></div>
+  <div class="grid" id="countriesGrid"></div>
+</section>
+
+<section id="payment" class="section dark">
+  <div class="head"><span class="eyebrow">PAYMENT OPTIONS</span><h2>وسائل الدفع والتحويل</h2><p>البطاقات أدناه هي الصور التي أرسلتها لنا، ويمكن تحديثها لاحقًا.</p></div>
+  <div class="payment-grid">
+    <article class="payment-card"><img src="assets/qi-card.jpg" alt="Qi Card"><h3>Qi Card</h3><p>رقم الحساب الظاهر في البطاقة المرفقة.</p><button class="copy" data-number="8377487890">نسخ الرقم</button></article>
+    <article class="payment-card"><img src="assets/super-qi.jpg" alt="Super Qi"><h3>سوبر كي</h3><p>طريقة دفع إلكترونية حسب بيانات البطاقة المرفقة.</p><button class="copy" data-number="8377487890">نسخ الرقم</button></article>
+    <article class="payment-card"><img src="assets/mastercard-whatsapp.jpg" alt="بطاقة الدفع والتحويل"><h3>بطاقة التحويل</h3><p>الرقم الظاهر في الصورة: 07772073950</p><a class="btn small" href="https://wa.me/9647772073950" target="_blank" rel="noopener">تواصل عبر WhatsApp</a></article>
+  </div>
+  <p class="security-note">لا تشارك كلمات المرور أو رموز OTP. تأكد من بيانات الدفع قبل تنفيذ أي عملية.</p>
+</section>
+
+<section id="calculator" class="section">
+  <div class="head"><span class="eyebrow">CALCULATOR</span><h2>حاسبة الحوالات</h2><p>الأسعار والعمولات هنا تجريبية حتى يحددها المدير من لوحة التحكم.</p></div>
+  <div class="calculator card">
+    <div class="field"><label>الدولة</label><select id="calcCountry"></select></div>
+    <div class="field"><label>المبلغ</label><input id="calcAmount" type="number" min="0" step="0.01" placeholder="0"></div>
+    <div class="field"><label>العملة</label><select id="calcCurrency"><option>IQD</option><option>USD</option></select></div>
+    <div class="field"><label>طريقة الاستلام</label><select id="calcMethod"><option value="cash">نقدي</option><option value="wallet">محفظة إلكترونية</option><option value="bank">حساب بنكي</option></select></div>
+    <div class="calc-result"><span>المبلغ المتوقع استلامه</span><strong id="calcResult">—</strong><small id="calcDetails">أدخل المبلغ لإظهار النتيجة.</small></div>
+  </div>
+  <div class="notice">أسعار الصرف والعمولات قابلة للتغيير، ويُعتمد السعر النهائي عند تنفيذ الحوالة.</div>
+</section>
+
+<section id="send" class="section alt">
+  <div class="head"><span class="eyebrow">TRANSFER REQUEST</span><h2>إرسال حوالة</h2><p>إرسال الطلب إلى WhatsApp لا يعني تنفيذ الحوالة تلقائيًا؛ الطلب يخضع للمراجعة والتأكيد.</p></div>
+  <form id="transferForm" class="card form">
+    <h3>بيانات المرسل</h3>
+    <div class="form-grid">
+      <div class="field"><label>الاسم الكامل *</label><input name="senderName" required></div>
+      <div class="field"><label>رقم الهاتف *</label><input name="senderPhone" required></div>
+      <div class="field"><label>المحافظة / المدينة</label><input name="senderCity"></div>
+      <div class="field"><label>طريقة التواصل</label><select name="contact"><option>WhatsApp</option><option>هاتف</option></select></div>
+    </div>
+    <h3>بيانات الحوالة</h3>
+    <div class="form-grid">
+      <div class="field"><label>الدولة المستلمة *</label><select id="sendCountry" name="country" required></select></div>
+      <div class="field"><label>المبلغ *</label><input id="sendAmount" name="amount" type="number" min="0" step="0.01" required></div>
+      <div class="field"><label>العملة *</label><select name="currency"><option>IQD</option><option>USD</option></select></div>
+      <div class="field"><label>طريقة الاستلام *</label><select id="sendMethod" name="method"><option value="cash">نقدي</option><option value="wallet">محفظة إلكترونية</option><option value="bank">حساب بنكي</option></select></div>
+    </div>
+    <div id="walletFields" class="conditional">
+      <div class="field"><label>اسم المحفظة</label><input name="walletName"></div>
+      <div class="field"><label>رقم المحفظة / الهاتف</label><input name="walletNumber"></div>
+    </div>
+    <div id="bankFields" class="conditional">
+      <div class="field"><label>اسم البنك</label><input name="bankName"></div>
+      <div class="field"><label>اسم صاحب الحساب</label><input name="accountName"></div>
+      <div class="field"><label>رقم الحساب</label><input name="accountNumber"></div>
+      <div class="field"><label>IBAN</label><input name="iban"></div>
+      <div class="field"><label>SWIFT</label><input name="swift"></div>
+    </div>
+    <h3>بيانات المستفيد</h3>
+    <div class="form-grid">
+      <div class="field"><label>الاسم الكامل *</label><input name="recipientName" required></div>
+      <div class="field"><label>رقم الهاتف</label><input name="recipientPhone"></div>
+      <div class="field"><label>المدينة</label><input name="recipientCity"></div>
+    </div>
+    <label class="check"><input type="checkbox" required> أقر بأن البيانات المدخلة صحيحة وأن الطلب يحتاج إلى تأكيد الشركة.</label>
+    <button class="btn primary full" type="submit">مراجعة الطلب وفتح WhatsApp</button>
+  </form>
+</section>
+
+<section id="track" class="section">
+  <div class="head"><span class="eyebrow">TRACKING</span><h2>تتبع حوالتي</h2><p>أدخل رقم الطلب الذي استلمته من الشركة.</p></div>
+  <div class="track-box card"><input id="trackId" placeholder="مثال: MS-ABC123"><button class="btn primary" id="trackBtn">تتبع</button><div id="trackResult"></div></div>
+</section>
+
+<section id="about" class="section alt"><div class="head"><span class="eyebrow">ABOUT</span><h2>من نحن</h2></div>
+  <div class="about card"><p><b>ماسة الشام للحوالات المالية</b> شركة حوالات مالية مقرها بغداد، تأسست عام 2020. تقدم خدمات تحويل واستلام الأموال إلى سوريا ومصر ولبنان وتركيا، مع خيارات استلام متعددة وخدمة عملاء مباشرة عبر WhatsApp.</p><p>الشركة مرخصة ولديها مكتب فعلي في بغداد. لا يعرض الموقع أي رقم ترخيص أو عنوان تفصيلي غير مقدم من الشركة.</p></div>
+</section>
+
+<section id="contact" class="section"><div class="head"><span class="eyebrow">CONTACT</span><h2>تواصل معنا</h2></div>
+  <div class="contact-grid">
+    <div class="card"><h3>ماسة الشام للحوالات المالية</h3><p>Baghdad, Iraq</p><p>Phone: <a href="tel:+9647772073950">+9647772073950</a></p><a class="btn primary" target="_blank" rel="noopener" href="https://wa.me/9647772073950">تواصل عبر WhatsApp</a></div>
+    <div class="card"><h3>تنبيه أمني</h3><p>لا تطلب الشركة منك إدخال كلمات مرور أو رموز OTP في نموذج الحوالة. لا تشارك هذه البيانات مع أي شخص.</p></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="brand"><span class="logo">◇</span><span><b>ماسة الشام</b><small>للحوالات المالية</small></span></div><p>© 2020–2026 Masa Al-Sham Financial Transfers. All rights reserved.</p></footer>
+<script src="app.js"></script>
+</body>
+</html>
